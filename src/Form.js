@@ -37,13 +37,18 @@ handleChange(event){
 	[event.target.name] : event.target.value
 	})	
 }
-
+myStyle = {
+    color: "white",
+    backgroundColor: "darkviolet",
+    padding: "10px",
+    fontFamily: "Sans-Serif"
+  }
 render(){ 
 	return(
         
 	<form onSubmit={this.handleSubmit}>
         <div class='textheader'>
-            <h2  style={{color: "red",backgroundColor: "lightgreen"}}  >ลงทะบียนข้อมูล</h2>
+            <h2 style={this.myStyle}>ลงทะบียนข้อมูล</h2>
         </div>
 		<input type='hidden' value={this.sheednumrow}></input>
 		
@@ -115,7 +120,7 @@ render(){
 		<select>
 			<option value={this.date}>วันนี้</option>
 		</select>
-			<label style={{color: "indigo"}}>เวลาที่ส่ง</label>
+			<label style={{color: "indigo",backgroundColor: "lightblue"}}>เวลาที่ส่ง</label>
 			<input type='time' placeholder='day' value={this.timeDay}></input>
 			
 		</div>
