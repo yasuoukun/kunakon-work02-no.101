@@ -43,7 +43,7 @@ render(){
         
 	<form onSubmit={this.handleSubmit}>
         <div class='textheader'>
-            <h2  style={{color: "red",backgroundColor: "lightgreen"}}  >ลงทะบียนข้อมูล</h2>
+            <h2  style={{color: "red",backgroundColor: "lightblue"}}  >ลงทะบียนข้อมูล</h2>
         </div>
 		<input type='hidden' value={this.sheednumrow}></input>
 		
