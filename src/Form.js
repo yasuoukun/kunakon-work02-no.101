@@ -37,23 +37,17 @@ handleChange(event){
 	[event.target.name] : event.target.value
 	})	
 }
-myStyle = {
-    color: "white",
-    backgroundColor: "darkviolet",
-    padding: "10px",
-    fontFamily: "Sans-Serif"
-  }
+
 render(){ 
 	return(
         
 	<form onSubmit={this.handleSubmit}>
-        <div class='textheader'>
-            <h2 style={this.myStyle}>ลงทะบียนข้อมูล</h2>
-        </div>
+        
 		<input type='hidden' value={this.sheednumrow}></input>
-		
+		<div class="contentner">
 		<div>
-		<label htmlFor='name' style={{color: "green"}}>ชื่อ-สกุล : </label>
+			<h1>ลงทะเบียนข้อมูล</h1>
+		<label htmlFor='name' >ชื่อ-สกุล : </label>
 		<input
             type='text'
 			name='name'
@@ -63,13 +57,13 @@ render(){
 		/>
 		</div>
 		<div>
-        <label htmlFor='password' style={{color: "blue"}}>รหัสนึกศึกษา : </label>
+        <label htmlFor='password'>รหัสนึกศึกษา : </label>
         <input name='password' type='password' placeholder='กรุณากรอกรหัสนักศึกษา' 
         value={this.state.password} onChange={this.handleChange}></input>
        
         </div>
 		<div>
-		<label htmlFor='age' style={{color: "purple"}}>อายุ : </label>
+		<label htmlFor='age' >อายุ : </label>
 		<input
             type='number'
 			name='age'
@@ -79,7 +73,7 @@ render(){
 		/>
 		</div>
 		<div>
-		<label htmlFor='email' style={{color: "red"}}yellow>อีเมล : </label>
+		<label htmlFor='email' yellow>อีเมล : </label>
 		<input
             type='email'
 			name='email'
@@ -89,7 +83,7 @@ render(){
 		/>
 		</div>
 		<div>
-		<label htmlFor='address' style={{color: "orange"}}>ที่อยู่ติดต่อ : </label>
+		<label htmlFor='address'>ที่อยู่ติดต่อ : </label>
 		
 		
 		<input
@@ -101,7 +95,7 @@ render(){
 		/>
 		</div>
 		<div>
-		<label htmlFor='phoneNo'style={{color: "brown"}}>หมายเลขโทรศัพท์ : </label>
+		<label htmlFor='phoneNo'>หมายเลขโทรศัพท์ : </label>
 		<input
             type='tel'
 			name='phoneNo'
@@ -112,7 +106,7 @@ render(){
 		</div>
         
         <div>
-            <label style={{color: "teal"}} >อนุญาตให้เก็บข้อมูล</label>
+            <label>อนุญาตให้เก็บข้อมูล</label>
             <input type="radio" value={this.onlike} onChange={this.handleChange}></input>
 
         </div>
@@ -120,7 +114,7 @@ render(){
 		<select>
 			<option value={this.date}>วันนี้</option>
 		</select>
-			<label style={{color: "indigo",backgroundColor: "lightblue"}}>เวลาที่ส่ง</label>
+			<label >เวลาที่ส่ง</label>
 			<input type='time' placeholder='day' value={this.timeDay}></input>
 			
 		</div>
@@ -128,8 +122,8 @@ render(){
 		
 		
 		
-		<button style={{color: "black",backgroundColor: "violet"}}>บันทึกข้อมูล</button>
-		
+		<button >บันทึกข้อมูล</button>
+		</div>
 	</form>
 	)
 }
